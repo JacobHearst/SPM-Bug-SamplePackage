@@ -7,6 +7,7 @@ let package = Package(
     name: "SamplePackage",
     products: [
         .library(name: "SamplePackage", targets: ["SamplePackage"]),
+        .library(name: "SecondProduct", targets: ["SamplePackage"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "600.0.0"),
@@ -15,7 +16,7 @@ let package = Package(
         .target(
             name: "SamplePackage",
             dependencies: [
-//                "SampleMacro"
+                "SampleMacro"
             ]
         ),
         .plugin(
