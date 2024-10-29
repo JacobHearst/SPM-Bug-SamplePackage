@@ -31,7 +31,7 @@ let package = Package(
         .macro(
             name: "SampleMacro",
             dependencies: [
-                .product(name: "SwiftSyntaxMacros", package: "swift-syntax")
+//                .product(name: "SwiftSyntaxMacros", package: "swift-syntax")
             ]
         )
     ]
