@@ -6,8 +6,8 @@ import CompilerPluginSupport
 let package = Package(
     name: "SamplePackage",
     products: [
+        .library(name: "SecondProduct", targets: ["SamplePackage"]),
         .library(name: "SamplePackage", targets: ["SamplePackage"]),
-        .library(name: "SecondProduct", targets: ["SamplePackage"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "600.0.0"),
